@@ -15,9 +15,11 @@ export const metadata: Metadata = {
     'base:app_id': '6983028cbd202a51855da57d',
     'fc:frame': 'vNext',
     'fc:frame:image': `${APP_URL}/hero-image.png`,
+    'fc:frame:image:aspect_ratio': '1.91:1',
     'fc:frame:button:1': 'Play Othello',
     'fc:frame:button:1:action': 'link',
-    'fc:frame:button:1:target': APP_URL,
+    'fc:frame:button:1:target': `${APP_URL}/`,
+    'fc:frame:post_url': `${APP_URL}/api/webhook`,
   },
   openGraph: {
     title: 'Othello - Cyber Edition',
