@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       {
         url: `${APP_URL}/hero-image.png`,
         width: 1200,
-        height: 630,
+        height: 800,
         alt: 'Othello Cyber Edition Game',
       }
     ],
