@@ -1,0 +1,18 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "Othello - Cyber Edition",
+    "iconUrl": "https://your-domain.com/icon.png",
+    "homeUrl": "https://your-domain.com/",
+    "imageUrl": "https://your-domain.com/hero-image.png",
+    "buttonTitle": "Play Othello",
+    "splashImageUrl": "https://your-domain.com/hero-image.png",
+    "splashBackgroundColor": "#0a0e1a",
+    "webhookUrl": "https://your-domain.com/api/webhook"
+  }
+}
