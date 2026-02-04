@@ -1,7 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { GameProvider, useGame } from '@/context/GameContext'
+import { FarcasterReady } from '@/components/FarcasterReady'
 import { Board } from '@/components/GameBoard/Board'
 import { ScoreBar } from '@/components/UI/ScoreBar'
 import { MainMenu } from '@/components/UI/MainMenu'
@@ -119,6 +120,7 @@ function GameScreen() {
 export default function Home() {
   return (
     <GameProvider>
+      <FarcasterReady />
       <GameScreen />
     </GameProvider>
   )

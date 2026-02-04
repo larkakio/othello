@@ -1,20 +1,19 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { FarcasterReady } from '@/components/FarcasterReady'
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://othello-omega.vercel.app')
+// Same as nibbles: hardcoded production URL fallback (no VERCEL_URL)
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://othello-omega.vercel.app'
 
 const FC_EMBED = {
   version: '1',
-  imageUrl: `${APP_URL}/hero-image.jpg`,
+  imageUrl: `${APP_URL}/hero-image.png`,
   button: {
     title: 'Play Othello',
     action: {
       type: 'launch_frame' as const,
       name: 'Othello - Cyber Edition',
       url: APP_URL,
-      splashImageUrl: `${APP_URL}/hero-image.jpg`,
+      splashImageUrl: `${APP_URL}/hero-image.png`,
       splashBackgroundColor: '#0a0e1a',
     },
   },
@@ -38,9 +37,9 @@ export const metadata: Metadata = {
     description: 'Play futuristic Othello on Base',
     images: [
       {
-        url: `${APP_URL}/hero-image.jpg`,
+        url: `${APP_URL}/hero-image.png`,
         width: 1200,
-        height: 800,
+        height: 630,
         alt: 'Othello Cyber Edition Game',
       }
     ],
@@ -57,7 +56,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-gradient-to-br from-[#0f1729] to-[#1a0f2e] min-h-screen">
-        <FarcasterReady />
         {children}
       </body>
     </html>
