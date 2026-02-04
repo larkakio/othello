@@ -11,6 +11,7 @@
   "dependencies": {
     "@coinbase/onchainkit": "^0.36.1",
     "@farcaster/frame-sdk": "^0.0.18",
+    "@farcaster/miniapp-sdk": "^0.2.2",
     "framer-motion": "^11.11.17",
     "next": "^15.1.6",
     "react": "^19.0.0",

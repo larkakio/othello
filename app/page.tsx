@@ -15,16 +15,6 @@ function GameScreen() {
   const [showMenu, setShowMenu] = useState(true)
   const [showDifficultySelect, setShowDifficultySelect] = useState(false)
 
-  useEffect(() => {
-    // Call ready when SDK is available
-    import('@farcaster/frame-sdk')
-      .then((module) => {
-        const sdk = module.default
-        sdk.actions.ready().catch(() => {})
-      })
-      .catch(() => {})
-  }, [])
-
   const handleStartAI = () => {
     setShowMenu(false)
     setGameMode('ai')
