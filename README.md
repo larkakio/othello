@@ -41,6 +41,8 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to see the app.
 
+**Live Demo**: [https://othello-omega.vercel.app](https://othello-omega.vercel.app)
+
 ### Build
 
 ```bash
@@ -75,7 +77,7 @@ Othello (Reversi) is a strategy board game for two players:
 
 1. Build the app: `npm run build`
 2. Deploy to your hosting provider
-3. Set environment variable: `NEXT_PUBLIC_APP_URL=https://your-domain.com`
+3. Set environment variable: `NEXT_PUBLIC_APP_URL=https://othello-omega.vercel.app`
 4. Generate account association at Base Build dashboard
 5. Update `public/.well-known/farcaster.json` with your credentials
 

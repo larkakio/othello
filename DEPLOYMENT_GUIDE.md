@@ -27,7 +27,7 @@ vercel --prod
    - Output Directory: `.next`
 5. Add Environment Variables:
    ```
-   NEXT_PUBLIC_APP_URL=https://your-app-url.vercel.app
+   NEXT_PUBLIC_APP_URL=https://othello-omega.vercel.app
    ```
 6. Click "Deploy"
 
@@ -43,7 +43,7 @@ This is required for the Farcaster account association tool to access your manif
 ## Step 2: Generate Account Association
 
 1. Go to [base.dev/preview?tab=account](https://base.dev/preview?tab=account)
-2. Paste your app URL (e.g., `your-app.vercel.app`)
+2. Paste your app URL: `othello-omega.vercel.app`
 3. Click "Submit"
 4. Click "Verify" and follow the instructions
 5. Copy the generated `accountAssociation` object
@@ -63,13 +63,13 @@ This is required for the Farcaster account association tool to access your manif
   "frame": {
     "version": "1",
     "name": "Othello - Cyber Edition",
-    "iconUrl": "https://your-app.vercel.app/icon.png",
-    "homeUrl": "https://your-app.vercel.app/",
-    "imageUrl": "https://your-app.vercel.app/hero-image.png",
+    "iconUrl": "https://othello-omega.vercel.app/icon.png",
+    "homeUrl": "https://othello-omega.vercel.app/",
+    "imageUrl": "https://othello-omega.vercel.app/hero-image.png",
     "buttonTitle": "Play Othello",
-    "splashImageUrl": "https://your-app.vercel.app/hero-image.png",
+    "splashImageUrl": "https://othello-omega.vercel.app/hero-image.png",
     "splashBackgroundColor": "#0a0e1a",
-    "webhookUrl": "https://your-app.vercel.app/api/webhook"
+    "webhookUrl": "https://othello-omega.vercel.app/api/webhook"
   }
 }
 ```
