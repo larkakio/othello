@@ -3,6 +3,21 @@ import './globals.css'
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
 
+const FC_EMBED = {
+  version: '1',
+  imageUrl: `${APP_URL}/hero-image.png`,
+  button: {
+    title: 'Play Othello',
+    action: {
+      type: 'launch_frame' as const,
+      name: 'Othello - Cyber Edition',
+      url: APP_URL,
+      splashImageUrl: `${APP_URL}/hero-image.png`,
+      splashBackgroundColor: '#0a0e1a',
+    },
+  },
+}
+
 export const metadata: Metadata = {
   title: 'Othello - Cyber Edition',
   description: 'Futuristic Othello game on Base & Farcaster',
@@ -13,15 +28,8 @@ export const metadata: Metadata = {
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'black-translucent',
     'base:app_id': '6983028cbd202a51855da57d',
-    'fc:frame': 'vNext',
-    'fc:frame:image': `${APP_URL}/hero-image.png`,
-    'fc:frame:image:aspect_ratio': '1.91:1',
-    'fc:frame:button:1': 'Play Othello',
-    'fc:frame:button:1:action': 'link',
-    'fc:frame:button:1:target': `${APP_URL}/`,
-    'of:version': 'vNext',
-    'of:accepts:farcaster': 'vNext',
-    'of:image': `${APP_URL}/hero-image.png`,
+    'fc:miniapp': JSON.stringify(FC_EMBED),
+    'fc:frame': JSON.stringify(FC_EMBED),
   },
   openGraph: {
     title: 'Othello - Cyber Edition',
