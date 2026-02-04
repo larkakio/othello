@@ -4,15 +4,26 @@
     "payload": "eyJkb21haW4iOiJvdGhlbGxvLW9tZWdhLnZlcmNlbC5hcHAifQ",
     "signature": "NMU/DE0ozyPMzd5D95nGOr/WUd8JO5uKbt3k+CoFqydQTEjQ9gc/RcZQyDfISwkBcoSMptJSfqPiBR2nAp3IOhs="
   },
-  "frame": {
+  "miniapp": {
     "version": "1",
     "name": "Othello - Cyber Edition",
+    "subtitle": "Strategic board game",
+    "description": "Play the classic Othello game with futuristic cyber-neon design and innovative swipe controls on Base Network",
     "iconUrl": "https://othello-omega.vercel.app/icon.png",
     "homeUrl": "https://othello-omega.vercel.app/",
-    "imageUrl": "https://othello-omega.vercel.app/hero-image.png",
-    "buttonTitle": "Play Othello",
     "splashImageUrl": "https://othello-omega.vercel.app/hero-image.png",
     "splashBackgroundColor": "#0a0e1a",
-    "webhookUrl": "https://othello-omega.vercel.app/api/webhook"
+    "webhookUrl": "https://othello-omega.vercel.app/api/webhook",
+    "primaryCategory": "games",
+    "tags": ["strategy", "board-game", "multiplayer", "othello", "reversi"],
+    "screenshotUrls": [
+      "https://othello-omega.vercel.app/hero-image.png"
+    ],
+    "heroImageUrl": "https://othello-omega.vercel.app/hero-image.png",
+    "tagline": "Master the board, flip the game",
+    "ogTitle": "Othello - Cyber Edition",
+    "ogDescription": "Play futuristic Othello on Base with cyber-neon graphics and AI opponents",
+    "ogImageUrl": "https://othello-omega.vercel.app/hero-image.png",
+    "noindex": false
   }
 }
