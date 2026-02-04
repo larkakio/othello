@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'black-translucent',
+    'base:app_id': '6983028cbd202a51855da57d',
   },
   openGraph: {
     title: 'Othello - Cyber Edition',
