@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useAccount } from 'wagmi'
 
 type User = {
   fid?: number
@@ -10,52 +10,24 @@ type User = {
 }
 
 export function useFarcasterSDK() {
-  const [user, setUser] = useState<User | null>(null)
-  const [isReady, setIsReady] = useState(false)
+  const { address } = useAccount()
 
-  useEffect(() => {
-    import('@farcaster/frame-sdk')
-      .then(async (module) => {
-        const sdk = module.default
-        try {
-          const context = await sdk.context
-          setUser(context.user || null)
-          setIsReady(true)
-        } catch (error) {
-          console.error('SDK context error:', error)
-          setIsReady(true)
-        }
-      })
-      .catch((error) => {
-        console.error('SDK import error:', error)
-        setIsReady(true)
-      })
-  }, [])
+  const user: User | null = address
+    ? {
+        displayName: `${address.slice(0, 6)}…${address.slice(-4)}`,
+      }
+    : null
 
   const openUrl = async (url: string) => {
-    try {
-      const module = await import('@farcaster/frame-sdk')
-      const sdk = module.default
-      await sdk.actions.openUrl(url)
-    } catch {
-      window.open(url, '_blank')
-    }
+    window.open(url, '_blank', 'noopener,noreferrer')
   }
 
-  const close = async () => {
-    try {
-      const module = await import('@farcaster/frame-sdk')
-      const sdk = module.default
-      await sdk.actions.close()
-    } catch {
-      window.close()
-    }
-  }
+  const close = async () => {}
 
   return {
     user,
-    isReady,
+    isReady: true,
     openUrl,
-    close
+    close,
   }
 }
